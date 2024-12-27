@@ -9,6 +9,17 @@
     <version>1.0-SNAPSHOT</version>
 <dependencies>
 
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.27.0</version>
+    </dependency>
+
+
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+
+
 </dependencies>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
