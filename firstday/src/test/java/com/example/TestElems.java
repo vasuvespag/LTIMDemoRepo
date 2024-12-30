@@ -1,6 +1,7 @@
 package com.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -30,15 +31,18 @@ public class TestElems {
             Thread.sleep(5000);
 
             driver.navigate().to("https://demoqa.com/radio-button");
-            Actions act = new Actions(driver);
+           // Actions act = new Actions(driver);
+           JavascriptExecutor js = (JavascriptExecutor) driver;
+           
             WebElement radBtn = driver.findElement(By.xpath("//input[@id='impressiveRadio']"));
-
-            act.moveToElement(radBtn);
+            js.executeScript("arguments[0].scrollIntoView()", radBtn);
+            radBtn.click();
+            //act.moveToElement(radBtn);
             // if(radBtn.isSelected()==false)
             // {
             //     radBtn.click();
             // }
-            act.click(radBtn).build().perform();
+            //act.click(radBtn).build().perform();
             //act.moveToElement(radBtn).click().build().perform();
             Thread.sleep(5000);
 
