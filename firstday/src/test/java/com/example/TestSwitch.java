@@ -4,6 +4,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
@@ -28,6 +29,9 @@ public class TestSwitch {
             Thread.sleep(3000);
             alert2.dismiss();
 
+
+            Actions act = new Actions(driver);
+            act.moveToElement()
             
             driver.findElement(By.xpath("//button[@id='promtButton']")).click();
             Alert alert3 = driver.switchTo().alert();
