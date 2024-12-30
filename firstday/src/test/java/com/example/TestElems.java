@@ -21,12 +21,16 @@ public class TestElems {
 
             WebElement chkBox= driver.findElement(By.xpath("//span[@class='rct-title']"));
 
-            if(chkBox.isDisplayed())
+            if(chkBox.isDisplayed() && chkBox.isEnabled())
             {
                 chkBox.click();
             }
             
             Thread.sleep(5000);
+
+            driver.navigate().to("https://demoqa.com/radio-button");
+
+            WebElement radBtn = driver.findElement(By.xpath(""));
 
         }
         catch(MalformedURLException me)
