@@ -3,6 +3,7 @@ package com.example;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -31,9 +32,10 @@ public class TestSwitch {
 
 
             Actions act = new Actions(driver);
-            act.moveToElement()
             
-            driver.findElement(By.xpath("//button[@id='promtButton']")).click();
+            
+            WebElement promtBtn = driver.findElement(By.xpath("//button[@id='promtButton']"));
+            act.moveToElement(promtBtn).click().build().perform();
             Alert alert3 = driver.switchTo().alert();
             Thread.sleep(3000);
             alert3.sendKeys("Tharun");
