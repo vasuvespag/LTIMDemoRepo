@@ -25,6 +25,10 @@ public class TestDrop {
         Select location = new Select(driver.findElement(By.id("location")));
         location.selectByIndex(3);
         Thread.sleep(5000);
+
+        driver.navigate().to("https://demoqa.com/webtables");
+        String lastName = driver.findElement(By.xpath("//div[@class='rt-table']/div[@class='rt-tbody']/div[2]/div/div[2]")).getText();
+        System.out.println(lastName);
         }
         catch(MalformedURLException me)
         {
