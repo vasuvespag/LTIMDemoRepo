@@ -39,7 +39,7 @@ public class TestElems {
             //     radBtn.click();
             // }
             act.click(radBtn).build().perform();
-            act.moveToElement(radBtn).click().build().perform();
+            //act.moveToElement(radBtn).click().build().perform();
             Thread.sleep(5000);
 
         }
