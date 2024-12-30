@@ -19,8 +19,9 @@ public class TestWindows {
         try{
             driver = new RemoteWebDriver(new URL("http://localhost:4444"), new ChromeOptions());
             driver.get("https://demo.automationtesting.in/Windows.html");
-            driver.findElement(By.xpath("(//button[@class='btn btn-info' and contains(text(),'click')])[1]")).click();
             String currWindowHandle = driver.getWindowHandle();
+            driver.findElement(By.xpath("(//button[@class='btn btn-info' and contains(text(),'click')])[1]")).click();
+            
 
             Set<String> allWindowHandles = driver.getWindowHandles();
 
@@ -34,9 +35,10 @@ public class TestWindows {
                     driver.switchTo().window(childWindowHandle);
                     String webdriverTxt = driver.findElement(By.xpath("(//div[@class='mb-4 h1'])[1]/following-sibling::p[2]")).getText();
                     System.out.println(webdriverTxt);
-                }
-                driver.close();
+                    driver.close();
                 driver.switchTo().window(currWindowHandle);
+                }
+                
             }
 
             
