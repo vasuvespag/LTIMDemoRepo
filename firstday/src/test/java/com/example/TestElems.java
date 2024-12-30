@@ -35,8 +35,9 @@ public class TestElems {
            JavascriptExecutor js = (JavascriptExecutor) driver;
            
             WebElement radBtn = driver.findElement(By.xpath("//input[@id='impressiveRadio']"));
-            js.executeScript("arguments[0].scrollIntoView()", radBtn);
-            radBtn.click();
+            js.executeScript("arguments[0].scrollIntoView();", radBtn);
+            Thread.sleep(5000);
+            js.executeScript("arguments[0].click();",radBtn);
             //act.moveToElement(radBtn);
             // if(radBtn.isSelected()==false)
             // {
