@@ -15,11 +15,7 @@ public class TestSample {
         try{
             driver=new RemoteWebDriver(new URL("http://localhost:4444"),new ChromeOptions());
             driver.get("http://www.google.com");
-            System.out.println("driver.getTitle()");
-        }
-        catch(MalformedURLException e)
-        {
-            e.printStackTrace();
+            System.out.println("driver.getTitle()");Tee();
         }
         finally{
             driver.quit();
