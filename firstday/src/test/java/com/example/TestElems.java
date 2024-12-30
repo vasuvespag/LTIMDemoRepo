@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -29,8 +30,17 @@ public class TestElems {
             Thread.sleep(5000);
 
             driver.navigate().to("https://demoqa.com/radio-button");
+            Actions act = new Actions(driver);
+            WebElement radBtn = driver.findElement(By.xpath("//input[@id='impressiveRadio']"));
 
-            WebElement radBtn = driver.findElement(By.xpath(""));
+            act.moveToElement(radBtn);
+            // if(radBtn.isSelected()==false)
+            // {
+            //     radBtn.click();
+            // }
+            act.click(radBtn).build().perform();
+            act.moveToElement(radBtn).click().build().perform();
+            Thread.sleep(5000);
 
         }
         catch(MalformedURLException me)
