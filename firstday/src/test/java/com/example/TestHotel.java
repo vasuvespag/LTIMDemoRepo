@@ -20,7 +20,7 @@ public class TestHotel {
         driver.findElement(By.id("login")).click();
     }
 
-    @Test
+    @Test(priority = 0)
     public void hotelOpenBrowser() throws MalformedURLException
     {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), new ChromeOptions());
