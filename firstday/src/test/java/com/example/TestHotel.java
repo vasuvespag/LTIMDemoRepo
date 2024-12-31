@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class TestHotel {
     public static WebDriver driver;
 
-    @Test(dependsOnMethods = {"openBrowser"})
+    @Test()
     public void login()
     {
         driver.findElement(By.id("username")).sendKeys("vasuvespag");
@@ -21,10 +21,16 @@ public class TestHotel {
     }
 
     @Test
-    public void openBrowser() throws MalformedURLException
+    public void hotelOpenBrowser() throws MalformedURLException
     {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), new ChromeOptions());
         driver.get("https://adactinhotelapp.com");
+    }
+
+    @Test(dependsOnMethods = {"hotelOpenBrowser","login"})
+    public void close()
+    {
+        driver.quit();
     }
 
 }
