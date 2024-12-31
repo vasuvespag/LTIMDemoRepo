@@ -1,5 +1,6 @@
 package com.example;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -35,13 +36,27 @@ public class TestModule1 {
         driver.get("https://demoqa.com/frames");
         driver.switchTo().frame("frame1");
     }
+
+    public void printContent(WebDriver driver)
+    {
+        //driver.switchTo.frame()
+        String content = driver.findElement(By.id("sampleHeading")).getText();
+        System.out.println(content);
+        driver.switchTo().defaultContent();
+        System.out.println(driver.getTitle());
+    }
+
+    public void cleanUp(WebDriver driver)
+    {
+        driver.quit();
+    }
     public static void main(String args[]) throws MalformedURLException
     {
         TestModule1 tm = new TestModule1();
         tm.driver= tm.setDriver();
         tm.openPage(tm.driver);
-        tm.printContent()
-        
+        tm.printContent(tm.driver);
+        tm.cleanUp(tm.driver);
 
 
     }
