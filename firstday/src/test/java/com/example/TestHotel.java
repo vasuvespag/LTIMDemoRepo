@@ -27,7 +27,7 @@ public class TestHotel {
         driver.get("https://adactinhotelapp.com");
     }
 
-    @Test(dependsOnMethods = {"hotelOpenBrowser","login"})
+    @Test
     public void close()
     {
         driver.quit();
