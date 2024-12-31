@@ -20,14 +20,14 @@ public class TestHotel {
         driver.findElement(By.id("login")).click();
     }
 
-    @Test(priority = 0)
-    public void hotelOpenBrowser() throws MalformedURLException
+    @Test(priority = -1)
+    public void openBrowser() throws MalformedURLException
     {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), new ChromeOptions());
         driver.get("https://adactinhotelapp.com");
     }
 
-    @Test
+    @Test(priority = 1)
     public void close()
     {
         driver.quit();
