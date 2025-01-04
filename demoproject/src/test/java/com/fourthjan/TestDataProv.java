@@ -12,6 +12,7 @@ import com.utils.SeleniumHelper;
 import com.uistore.LocatorUtils;
 import com.utils.PropUtils;
 import com.utils.ExcelUtils;
+import com.utils.ScreenshotUtil;
 import java.io.IOException;
 import java.net.URL;
 import java.net.MalformedURLException;
@@ -51,8 +52,8 @@ public class TestDataProv {
         //LocatorUtils loc = new LocatorUtils();
         helper.typeInto(LocatorUtils.searchBar, searchWord);
         Thread.sleep(5000);
-
-        helper.performClick(loc.testLink);
+        ScreenshotUtil.captureScreenshot(driver,"Test1");
+        //helper.performClick(loc.testLink);
         
     }
 

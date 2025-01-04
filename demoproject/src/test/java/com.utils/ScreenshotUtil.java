@@ -1,5 +1,7 @@
 package com.utils;
 
+import java.io.File;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
@@ -10,7 +12,13 @@ public class ScreenshotUtil {
     {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
-        String filepath=System.getProperty("user.dir")+"/screenshots/"+filename+".png";
+        File dir = new File("/screenshots");
+
+        if(!dir.exists())
+        {
+            dir.mkdir();
+        }
+        String filepath=System.getProperty("user.dir")+"/"+dir+"/"+filename+".png";
 
         try{
             FileHandler.copy(file, new File(filepath));
