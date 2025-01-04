@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.fourthjan.TestDataProv
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 5, Time elapsed: 3.294 s <<< FAILURE! - in com.fourthjan.TestDataProv
+setup(com.fourthjan.TestDataProv)  Time elapsed: 3.163 s  <<< FAILURE!
+org.openqa.selenium.InvalidArgumentException: 
+invalid argument
+  (Session info: chrome=131.0.6778.204)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.1.100+', java.version: '17.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [3fb37c4f987fcbfbc737d060c9be2d32, get {url="https://www.amazon.in"}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.204, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33919}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://10.81.116.3:4444/sessi..., se:cdpVersion: 131.0.6778.204, se:containerName: , se:noVncPort: 7900, se:vnc: ws://10.81.116.3:4444/sessi..., se:vncEnabled: true, se:vncLocalAddress: ws://10.81.116.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3fb37c4f987fcbfbc737d060c9be2d32
+	at com.fourthjan.TestDataProv.setup(TestDataProv.java:32)
+

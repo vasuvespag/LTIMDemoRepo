@@ -22,13 +22,14 @@ public class TestDataProv {
 
 
     @BeforeMethod
-    public void setup() throws MalformedURLException
+    public void setup() throws MalformedURLException, IOException
     {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"),new ChromeOptions());
         PropUtils prop = new PropUtils();
-        String URL = prop.url;
-        
-        driver.get(URL);
+        prop.readProp();
+        String link = prop.url;
+        System.out.println(link);
+        driver.get(link);
         
     }
 
