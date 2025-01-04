@@ -1,5 +1,6 @@
 package com.utils;
 
+import java.io.FileReader;
 import java.util.Properties;
 
 public class PropUtils {
@@ -7,8 +8,9 @@ public class PropUtils {
 
     public void readProp()
     {
+        FileReader reader = new FileReader("./config/config.properties");
         Properties prop = new Properties();
-        prop.load();
+        prop.load(reader);
 
         url = prop.getProperty("URL");
 

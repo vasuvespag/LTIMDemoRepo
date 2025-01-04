@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.ss.usermodel.DataFormatter.formatter;
 
 public class ExcelUtils {
 
@@ -22,12 +24,12 @@ public class ExcelUtils {
         
     }
 
-    public obj[][] getDataProv()
+    public Object[][] getDataProv()
     {
         int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
         int cellCount = sheet.getRow(1).getLastCellNum();
 
-        data = new String[rowCount][cellCount];
+        String data[][] = new String[rowCount][cellCount];
 
         for (int i=0; i<=rowCount; i++)
         {
@@ -35,10 +37,11 @@ public class ExcelUtils {
             for(int j = 0; j<cellCount; j++)
             {
                 cell = row.getCell(j);
-                String val = formatter.formatCellValue(cell)
+                String val = formatter.formatCellValue(cell);
                 data[i][j] = val;
             }
         }
+        return data;
     }
 
 }

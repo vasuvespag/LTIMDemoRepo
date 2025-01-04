@@ -1,7 +1,9 @@
-package com.utils;
+package com.uistore;
+
+import org.openqa.selenium.*;
 
 public class LocatorUtils {
 
-    By searchBar = By.xpath("//input[@id='twotabsearchtextbox']");
+   public By searchBar = By.xpath("//input[@id='twotabsearchtextbox']");
 
 }
