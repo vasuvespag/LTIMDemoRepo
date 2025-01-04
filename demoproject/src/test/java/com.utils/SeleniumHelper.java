@@ -17,6 +17,12 @@ public class SeleniumHelper {
         driver.findElement(cont).sendKeys(Keys.ENTER);
     }
 
+    public void performClick(By cont)
+    {
+        driver.findElement(cont).click();
+    }
+
+   
 
 
     

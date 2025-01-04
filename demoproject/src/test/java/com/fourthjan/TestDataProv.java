@@ -29,7 +29,7 @@ public class TestDataProv {
         
         String link = prop.readProp();
         System.out.println(link);
-        driver.get("https://www.amazon.in");
+        driver.get(link);
         Thread.sleep(5000);
         
     }
@@ -48,9 +48,11 @@ public class TestDataProv {
     public void testAmazon(String searchWord) throws InterruptedException
     {
         SeleniumHelper helper = new SeleniumHelper(driver);
-        LocatorUtils loc = new LocatorUtils();
-        helper.typeInto(loc.searchBar, searchWord);
+        //LocatorUtils loc = new LocatorUtils();
+        helper.typeInto(LocatorUtils.searchBar, searchWord);
         Thread.sleep(5000);
+
+        helper.performClick(loc.testLink);
         
     }
 
