@@ -12,7 +12,9 @@ public class SeleniumHelper {
 
     public void typeInto(By cont, String content)
     {
+        System.out.println(content);
         driver.findElement(cont).sendKeys(content);
+        driver.findElement(cont).sendKeys(Keys.ENTER);
     }
 
 
