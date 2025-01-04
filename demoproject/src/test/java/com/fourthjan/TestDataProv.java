@@ -14,6 +14,7 @@ import com.utils.PropUtils;
 import com.utils.ExcelUtils;
 import java.io.IOException;
 import java.net.URL;
+import java.net.MalformedURLException;
 
 
 public class TestDataProv {
@@ -21,12 +22,13 @@ public class TestDataProv {
 
 
     @BeforeMethod
-    public void setup()
+    public void setup() throws MalformedURLException
     {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"),new ChromeOptions());
         PropUtils prop = new PropUtils();
+        String URL = prop.url;
         
-        driver.get(prop.url);
+        driver.get(URL);
         
     }
 
