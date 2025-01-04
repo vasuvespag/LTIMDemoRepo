@@ -6,6 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 import com.utils.SeleniumHelper;
@@ -20,12 +21,14 @@ import java.net.MalformedURLException;
 
 public class TestDataProv {
     public static WebDriver driver;
+    Logger logger = Logger.getLogger(TestDataProv.class);
 
 
     @BeforeMethod
     public void setup() throws MalformedURLException, IOException, InterruptedException
     {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"),new ChromeOptions());
+        logger.info("Driver Obje");
         PropUtils prop = new PropUtils();
         
         String link = prop.readProp();
