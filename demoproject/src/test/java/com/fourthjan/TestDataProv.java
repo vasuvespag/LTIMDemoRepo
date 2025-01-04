@@ -43,6 +43,8 @@ public class TestDataProv {
         Object[][] data = readExcel.getDataProv();
         System.out.println(data);
         return data;
+
+        demoproject/config/config.properties
     }
 
     @Test (dataProvider = "readSearchTerm")
