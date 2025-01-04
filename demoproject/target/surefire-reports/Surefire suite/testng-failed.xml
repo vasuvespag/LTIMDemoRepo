@@ -5,7 +5,7 @@
     <classes>
       <class name="com.fourthjan.TestDataProv">
         <methods>
-          <include name="testAmazon"/>
+          <include name="testAmazon" invocation-numbers="0 1"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

@@ -22,14 +22,15 @@ public class TestDataProv {
 
 
     @BeforeMethod
-    public void setup() throws MalformedURLException, IOException
+    public void setup() throws MalformedURLException, IOException, InterruptedException
     {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"),new ChromeOptions());
         PropUtils prop = new PropUtils();
         prop.readProp();
         String link = prop.url;
         System.out.println(link);
-        driver.get(link);
+        driver.get("https://www.amazon.in");
+        Thread.sleep(5000);
         
     }
 
@@ -39,7 +40,7 @@ public class TestDataProv {
         ExcelUtils readExcel = new ExcelUtils();
         readExcel.setExcelFile("./testdata/data.xlsx","Sheet1");
         Object[][] data = readExcel.getDataProv();
-
+        System.out.println(data.toString);
         return data;
     }
 
