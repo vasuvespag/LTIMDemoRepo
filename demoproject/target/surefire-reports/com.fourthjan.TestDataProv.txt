@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.fourthjan.TestDataProv
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 15.926 s <<< FAILURE! - in com.fourthjan.TestDataProv
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 15.087 s <<< FAILURE! - in com.fourthjan.TestDataProv
 testAmazon(com.fourthjan.TestDataProv)  Time elapsed: 0.034 s  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='twotabsearchtextbox']"}
@@ -10,12 +10,21 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.1.100+', java.version: '17.0.12'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [56b0700b408a1e22839f6380857b7413, findElement {using=xpath, value=//input[@id='twotabsearchtextbox']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.204, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35809}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://10.81.116.3:4444/sessi..., se:cdpVersion: 131.0.6778.204, se:containerName: , se:noVncPort: 7900, se:vnc: ws://10.81.116.3:4444/sessi..., se:vncEnabled: true, se:vncLocalAddress: ws://10.81.116.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 56b0700b408a1e22839f6380857b7413
-	at com.fourthjan.TestDataProv.testAmazon(TestDataProv.java:52)
+Command: [28557448626322265ce2e6d69e9fdd0d, findElement {using=xpath, value=//input[@id='twotabsearchtextbox']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.204, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45451}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://10.80.240.11:4444/sess..., se:cdpVersion: 131.0.6778.204, se:containerName: , se:noVncPort: 7900, se:vnc: ws://10.80.240.11:4444/sess..., se:vncEnabled: true, se:vncLocalAddress: ws://10.80.240.11:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28557448626322265ce2e6d69e9fdd0d
+	at com.fourthjan.TestDataProv.testAmazon(TestDataProv.java:59)
 
-testAmazon(com.fourthjan.TestDataProv)  Time elapsed: 0.019 s  <<< FAILURE!
-java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at com.fourthjan.TestDataProv.testAmazon(TestDataProv.java:52)
+testAmazon(com.fourthjan.TestDataProv)  Time elapsed: 0.022 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='twotabsearchtextbox']"}
+  (Session info: chrome=131.0.6778.204)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.1.100+', java.version: '17.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [b32d5d37039a56fe6151ae9f61837282, findElement {using=xpath, value=//input[@id='twotabsearchtextbox']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.204, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40917}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://10.80.240.11:4444/sess..., se:cdpVersion: 131.0.6778.204, se:containerName: , se:noVncPort: 7900, se:vnc: ws://10.80.240.11:4444/sess..., se:vncEnabled: true, se:vncLocalAddress: ws://10.80.240.11:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b32d5d37039a56fe6151ae9f61837282
+	at com.fourthjan.TestDataProv.testAmazon(TestDataProv.java:59)
 

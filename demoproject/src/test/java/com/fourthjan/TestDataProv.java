@@ -21,17 +21,18 @@ import java.net.MalformedURLException;
 
 public class TestDataProv {
     public static WebDriver driver;
-    Logger logger = Logger.getLogger(TestDataProv.class);
+    public static final Logger logger = Logger.getLogger(TestDataProv.class);
 
 
     @BeforeMethod
     public void setup() throws MalformedURLException, IOException, InterruptedException
     {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"),new ChromeOptions());
-        logger.info("Driver Obje");
+        logger.info("Driver Object created");
         PropUtils prop = new PropUtils();
         
         String link = prop.readProp();
+        logger.info("Read from property file");
         System.out.println(link);
         driver.get(link);
         Thread.sleep(5000);
@@ -47,7 +48,7 @@ public class TestDataProv {
         System.out.println(data);
         return data;
 
-        demoproject/config/config.properties
+        
     }
 
     @Test (dataProvider = "readSearchTerm")
