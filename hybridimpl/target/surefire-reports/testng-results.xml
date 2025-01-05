@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-05T09:11:26 UTC" name="Surefire suite" finished-at="2025-01-05T09:11:54 UTC" duration-ms="27906">
+  <suite started-at="2025-01-05T09:32:03 UTC" name="Surefire suite" finished-at="2025-01-05T09:32:31 UTC" duration-ms="27749">
     <groups>
     </groups>
-    <test started-at="2025-01-05T09:11:26 UTC" name="Surefire test" finished-at="2025-01-05T09:11:54 UTC" duration-ms="27906">
+    <test started-at="2025-01-05T09:32:03 UTC" name="Surefire test" finished-at="2025-01-05T09:32:31 UTC" duration-ms="27749">
       <class name="com.hybriddemo.TestHybrid">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:28 UTC" name="setup" finished-at="2025-01-05T09:11:31 UTC" duration-ms="3460" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:04 UTC" name="setup" finished-at="2025-01-05T09:32:08 UTC" duration-ms="3624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:31 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T09:11:37 UTC" duration-ms="5930" status="PASS">
+        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:08 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T09:32:14 UTC" duration-ms="5963" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,15 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHotel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:37 UTC" name="tearDown" finished-at="2025-01-05T09:11:37 UTC" duration-ms="79" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:14 UTC" name="tearDown" finished-at="2025-01-05T09:32:14 UTC" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:37 UTC" name="setup" finished-at="2025-01-05T09:11:40 UTC" duration-ms="2697" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:14 UTC" name="setup" finished-at="2025-01-05T09:32:17 UTC" duration-ms="2948" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:40 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T09:11:45 UTC" duration-ms="5707" status="PASS">
+        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:17 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T09:32:22 UTC" duration-ms="5706" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,15 +51,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHotel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:45 UTC" name="tearDown" finished-at="2025-01-05T09:11:46 UTC" duration-ms="76" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:22 UTC" name="tearDown" finished-at="2025-01-05T09:32:22 UTC" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:46 UTC" name="setup" finished-at="2025-01-05T09:11:48 UTC" duration-ms="2880" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:22 UTC" name="setup" finished-at="2025-01-05T09:32:25 UTC" duration-ms="2705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:48 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T09:11:54 UTC" duration-ms="5699" status="PASS">
+        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:25 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T09:32:31 UTC" duration-ms="5687" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,7 +75,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHotel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@30b7c004]" started-at="2025-01-05T09:11:54 UTC" name="tearDown" finished-at="2025-01-05T09:11:54 UTC" duration-ms="75" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@15b204a1]" started-at="2025-01-05T09:32:31 UTC" name="tearDown" finished-at="2025-01-05T09:32:31 UTC" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

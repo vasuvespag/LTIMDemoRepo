@@ -65,7 +65,8 @@ public class TestHybrid {
         driver.get(readProp("Url"));
 
         spark = new ExtentSparkReporter("SparkReport.html");
-        
+        extent = new ExtentReports();
+        extent.attachReporter(spark);
         logger.info("Info - Hotel App Page Opened");
     }
 
@@ -83,6 +84,8 @@ public class TestHybrid {
     public void testHotel(String user, String pass) throws IOException, InterruptedException
     {
 
+        test = extent.createTest("Hotel Login");
+
         TestHybrid th = new TestHybrid();
         logger.info("Info - Test Object created");
         logger.warn("Warning - Can Possibly throw Exception");
@@ -92,6 +95,8 @@ public class TestHybrid {
         Thread.sleep(5000);
         captureScreenshot();
         logger.debug("Debug - Look to add to report");
+
+        test.pass("Successfully Logged into the HotelApp");
     }
 
     @AfterMethod

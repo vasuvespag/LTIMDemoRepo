@@ -13,3 +13,18 @@
 77 INFO  Info - Test Object created
 78 WARN  Warning - Can Possibly throw Exception
 84 DEBUG Debug - Look to add to report
+61 INFO  Info - Driver Instantiated
+70 INFO  Info - Hotel App Page Opened
+90 INFO  Info - Test Object created
+91 WARN  Warning - Can Possibly throw Exception
+97 DEBUG Debug - Look to add to report
+61 INFO  Info - Driver Instantiated
+70 INFO  Info - Hotel App Page Opened
+90 INFO  Info - Test Object created
+91 WARN  Warning - Can Possibly throw Exception
+97 DEBUG Debug - Look to add to report
+61 INFO  Info - Driver Instantiated
+70 INFO  Info - Hotel App Page Opened
+90 INFO  Info - Test Object created
+91 WARN  Warning - Can Possibly throw Exception
+97 DEBUG Debug - Look to add to report
