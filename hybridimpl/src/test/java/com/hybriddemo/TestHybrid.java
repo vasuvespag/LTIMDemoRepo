@@ -1,6 +1,7 @@
 package com.hybriddemo;
 import org.testng.*;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import java.io.FileInputStream;
@@ -51,6 +52,15 @@ public class TestHybrid {
         driver.get(readProp("Url"));
     }
 
+    @DataProvider
+    public Object[][] readData()
+    {
+        setExcelFile(excelPath, "Sheet1");
+        String[][] testdata = readExcelData();
+        return testdata;
+
+    }
+
     @Test
     public void testHotel() throws IOException
     {
@@ -58,7 +68,9 @@ public class TestHybrid {
         TestHybrid th = new TestHybrid();
         String excelPath = readProp("excelPath");
         //System.out.println(excelPath);
+        setExcelFile(excelPath, "Sheet1");
         String[][] testdata = readExcelData();
+        System.out.println(testdata);
         th.typeIntoField(uname, "vasuvespag");
         th.typeIntoField(pwd, "Vasu1234");
         th.clickElem(loginBtn);
@@ -103,12 +115,12 @@ public class TestHybrid {
         String[][] data = null;
         int rows = sheet.getLastRowNum()-sheet.getFirstRowNum();
         int cells = sheet.getRow(1).getLastCellNum();
-
+        data = new String[rows-1][cells];
         for (int i = 1; i< rows; i++)
         {
             for (int j = 0; j<cells; j++)
             {
-                data[i][j]=sheet.getRow(i).getCell[j].getStringCellValue();
+                data[i-1][j]=sheet.getRow(i).getCell(j).getStringCellValue();
             }
         }
         return data;
