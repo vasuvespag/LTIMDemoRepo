@@ -42,14 +42,9 @@ public class TestHybrid {
     ExtentSparkReporter spark;
     ExtentTest test;
 
-    public static By uname = By.id("username");
-    public static By pwd = By.id("password");
-    public static By loginBtn = By.id("login");
+    
 
-    public static XSSFWorkbook wb;
-    public static XSSFSheet sheet;
-    public static XSSFRow row;
-    public static XSSFCell cell;
+    
 
     @BeforeMethod
     public void setup() throws MalformedURLException, IOException
@@ -112,49 +107,11 @@ public class TestHybrid {
         extent.flush();
     }
 
-    public static String readProp(String propToRead) throws IOException
-    {
-        String filePath = System.getProperty("user.dir");
-        FileInputStream file = new FileInputStream(filePath+"/config/config.properties");
-        Properties prop = new Properties();
-        prop.load(file);
-        String property = prop.getProperty(propToRead);
-        return property;
-    }
+    
 
-    public void typeIntoField(By loc, String content)
-    {
-        driver.findElement(loc).sendKeys(content);
-    }
+    
 
-    public void clickElem(By loc)
-    {
-        driver.findElement(loc).click();
-    }
-
-    public static void setExcelFile(String excelPath, String sheetName) throws IOException
-    {
-        File file = new File(excelPath);
-        FileInputStream fis = new FileInputStream(file);
-        wb = new XSSFWorkbook(fis);
-        sheet = wb.getSheet(sheetName);
-    }
-
-    public static String[][] readExcelData()
-    {
-        String[][] data = null;
-        int rows = sheet.getLastRowNum()-sheet.getFirstRowNum();
-        int cells = sheet.getRow(1).getLastCellNum();
-        data = new String[rows-1][cells];
-        for (int i = 1; i< rows; i++)
-        {
-            for (int j = 0; j<cells; j++)
-            {
-                data[i-1][j]=sheet.getRow(i).getCell(j).getStringCellValue();
-            }
-        }
-        return data;
-    }
+    
 
     public static void captureScreenshot() throws IOException
     {
