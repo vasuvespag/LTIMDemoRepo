@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.net.URL;
 import java.net.MalformedURLException;
 import java.util.Properties;
+import org.openqa.selenium.
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,6 +21,10 @@ public class TestHybrid {
     public static WebDriver driver;
     public static String url;
     public static String filePath;
+
+    public static By uname = By.id("username");
+    public static By pwd = By.id("password");
+    public static By loginBtn = By.id("login");
 
     @BeforeMethod
     public void setup() throws MalformedURLException, IOException
@@ -43,15 +48,25 @@ public class TestHybrid {
     @Test
     public void testHotel()
     {
-        System.out.println("Started Driver");
-        System.out.println(filePath);
-        System.out.println(url);
-        System.out.println(driver.getTitle());
+        TestHybrid th = new TestHybrid();
+        th.typeIntoField(uname, "vasuvespag");
+        th.typeIntoField(pwd, "Vasu1234");
+        th.clickElem(loginBtn);
     }
 
     @AfterMethod
     public void tearDown()
     {
         driver.quit();
+    }
+
+    public void typeIntoField(By loc, String content)
+    {
+        driver.findElement(loc).sendKeys(content);
+    }
+
+    public void clickElem(By loc)
+    {
+        driver.findElement(loc).click();
     }
 }
