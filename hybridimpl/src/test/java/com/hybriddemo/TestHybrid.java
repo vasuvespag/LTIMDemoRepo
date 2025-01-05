@@ -5,6 +5,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.File;
 import java.time.Duration;
 import java.net.URL;
 import java.net.MalformedURLException;
@@ -45,13 +46,16 @@ public class TestHybrid {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //driver.manage().timeouts().pageLoadTimeOut(Duration.ofSeconds(15));
 
-        driver.get(url);
+        driver.get(readProp("Url"));
     }
 
     @Test
-    public void testHotel()
+    public void testHotel() throws IOException
     {
+
         TestHybrid th = new TestHybrid();
+        String excelPath = readProp("excelPath");
+        //System.out.println(excelPath);
         th.typeIntoField(uname, "vasuvespag");
         th.typeIntoField(pwd, "Vasu1234");
         th.clickElem(loginBtn);
@@ -63,13 +67,14 @@ public class TestHybrid {
         driver.quit();
     }
 
-    public static String readProp()
+    public static String readProp(String propToRead) throws IOException
     {
         String filePath = System.getProperty("user.dir");
         FileInputStream file = new FileInputStream(filePath+"/config/config.properties");
         Properties prop = new Properties();
         prop.load(file);
-        String url = prop.getProperty("Url");
+        String property = prop.getProperty(propToRead);
+        return property;
     }
 
     public void typeIntoField(By loc, String content)
@@ -88,5 +93,10 @@ public class TestHybrid {
         FileInputStream fis = new FileInputStream(file);
         wb = new XSSFWorkbook(fis);
         sheet = wb.getSheet(sheetName);
+    }
+
+    public static String[][] readExcelData()
+    {
+        
     }
 }
