@@ -11,8 +11,11 @@ import java.time.Duration;
 import java.net.URL;
 import java.net.MalformedURLException;
 import java.util.Properties;
-import org.openqa.selenium.By;
+import org.openqa.selenium.io.FileHandler;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -63,7 +66,7 @@ public class TestHybrid {
     }
 
     @Test(dataProvider = "readData")
-    public void testHotel(String user, String pass) throws IOException
+    public void testHotel(String user, String pass) throws IOException, InterruptedException
     {
 
         TestHybrid th = new TestHybrid();
@@ -71,6 +74,8 @@ public class TestHybrid {
         th.typeIntoField(uname,user);
         th.typeIntoField(pwd,pass);
         th.clickElem(loginBtn);
+        Thread.sleep(5000);
+        captureScreenshot();
     }
 
     @AfterMethod
@@ -121,5 +126,13 @@ public class TestHybrid {
             }
         }
         return data;
+    }
+
+    public static void captureScreenshot() throws IOException
+    {
+        
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String screenshotPath = "screenshots/hotel.png";
+        FileHandler.copy(screenshot, new File(screenshotPath));
     }
 }
