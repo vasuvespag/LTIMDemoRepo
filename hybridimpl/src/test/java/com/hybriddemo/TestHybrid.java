@@ -33,6 +33,8 @@ public class TestHybrid {
 
     public static XSSFWorkbook wb;
     public static XSSFSheet sheet;
+    public static XSSFRow row;
+    public static XSSFCell cell;
 
     @BeforeMethod
     public void setup() throws MalformedURLException, IOException
@@ -56,6 +58,7 @@ public class TestHybrid {
         TestHybrid th = new TestHybrid();
         String excelPath = readProp("excelPath");
         //System.out.println(excelPath);
+        String[][] testdata = readExcelData();
         th.typeIntoField(uname, "vasuvespag");
         th.typeIntoField(pwd, "Vasu1234");
         th.clickElem(loginBtn);
@@ -97,6 +100,17 @@ public class TestHybrid {
 
     public static String[][] readExcelData()
     {
-        
+        String[][] data = null;
+        int rows = sheet.getLastRowNum()-sheet.getFirstRowNum();
+        int cells = sheet.getRow(1).getLastCellNum();
+
+        for (int i = 1; i< rows; i++)
+        {
+            for (int j = 0; j<cells; j++)
+            {
+                data[i][j]=sheet.getRow(i).getCell[j].getStringCellValue();
+            }
+        }
+        return data;
     }
 }
