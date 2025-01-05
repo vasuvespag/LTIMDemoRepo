@@ -3,6 +3,7 @@ import org.testng.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -63,8 +64,8 @@ public class TestHybrid {
         //driver.manage().timeouts().pageLoadTimeOut(Duration.ofSeconds(15));
 
         driver.get(readProp("Url"));
-
-        spark = new ExtentSparkReporter("SparkReport.html");
+        String reportPath = "./reports/SparkReport.html";
+        spark = new ExtentSparkReporter(reportPath);
         extent = new ExtentReports();
         extent.attachReporter(spark);
         logger.info("Info - Hotel App Page Opened");
@@ -103,6 +104,12 @@ public class TestHybrid {
     public void tearDown()
     {
         driver.quit();
+    }
+
+    @AfterTest
+    public void flushRep()
+    {
+        extent.flush();
     }
 
     public static String readProp(String propToRead) throws IOException
