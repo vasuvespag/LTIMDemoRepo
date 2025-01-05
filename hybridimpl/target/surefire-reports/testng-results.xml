@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-05T07:03:11 UTC" name="Surefire suite" finished-at="2025-01-05T07:03:16 UTC" duration-ms="5243">
+  <suite started-at="2025-01-05T07:15:49 UTC" name="Surefire suite" finished-at="2025-01-05T07:16:04 UTC" duration-ms="14251">
     <groups>
     </groups>
-    <test started-at="2025-01-05T07:03:11 UTC" name="Surefire test" finished-at="2025-01-05T07:03:16 UTC" duration-ms="5243">
+    <test started-at="2025-01-05T07:15:49 UTC" name="Surefire test" finished-at="2025-01-05T07:16:04 UTC" duration-ms="14251">
       <class name="com.hybriddemo.TestHybrid">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@28c4711c]" started-at="2025-01-05T07:03:11 UTC" name="setup" finished-at="2025-01-05T07:03:15 UTC" duration-ms="3801" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:15:50 UTC" name="setup" finished-at="2025-01-05T07:15:54 UTC" duration-ms="3545" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testHotel()[pri:0, instance:com.hybriddemo.TestHybrid@28c4711c]" started-at="2025-01-05T07:03:15 UTC" name="testHotel" finished-at="2025-01-05T07:03:16 UTC" duration-ms="1284" status="PASS">
+        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:15:54 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T07:15:54 UTC" duration-ms="610" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vasuvespag]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vasu1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHotel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@28c4711c]" started-at="2025-01-05T07:03:16 UTC" name="tearDown" finished-at="2025-01-05T07:03:16 UTC" duration-ms="78" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:15:54 UTC" name="tearDown" finished-at="2025-01-05T07:15:55 UTC" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:15:55 UTC" name="setup" finished-at="2025-01-05T07:15:58 UTC" duration-ms="3119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:15:58 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T07:15:58 UTC" duration-ms="577" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tonymontana]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jarvis123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHotel -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:15:58 UTC" name="tearDown" finished-at="2025-01-05T07:15:58 UTC" duration-ms="75" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:15:58 UTC" name="setup" finished-at="2025-01-05T07:16:03 UTC" duration-ms="4628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testHotel(java.lang.String,java.lang.String)[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:16:03 UTC" name="testHotel" data-provider="readData" finished-at="2025-01-05T07:16:04 UTC" duration-ms="629" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ananyaaa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ananya1601]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHotel -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hybriddemo.TestHybrid@ba8d91c]" started-at="2025-01-05T07:16:04 UTC" name="tearDown" finished-at="2025-01-05T07:16:04 UTC" duration-ms="77" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

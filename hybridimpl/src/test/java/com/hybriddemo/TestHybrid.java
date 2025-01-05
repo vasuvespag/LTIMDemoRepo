@@ -52,27 +52,24 @@ public class TestHybrid {
         driver.get(readProp("Url"));
     }
 
-    @DataProvider
-    public Object[][] readData()
+    @DataProvider(name="readData")
+    public Object[][] readData() throws IOException
     {
+        String excelPath = readProp("excelPath");
         setExcelFile(excelPath, "Sheet1");
-        String[][] testdata = readExcelData();
+        Object[][] testdata = readExcelData();
         return testdata;
 
     }
 
-    @Test
-    public void testHotel() throws IOException
+    @Test(dataProvider = "readData")
+    public void testHotel(String user, String pass) throws IOException
     {
 
         TestHybrid th = new TestHybrid();
-        String excelPath = readProp("excelPath");
-        //System.out.println(excelPath);
-        setExcelFile(excelPath, "Sheet1");
-        String[][] testdata = readExcelData();
-        System.out.println(testdata);
-        th.typeIntoField(uname, "vasuvespag");
-        th.typeIntoField(pwd, "Vasu1234");
+        
+        th.typeIntoField(uname,user);
+        th.typeIntoField(pwd,pass);
         th.clickElem(loginBtn);
     }
 
