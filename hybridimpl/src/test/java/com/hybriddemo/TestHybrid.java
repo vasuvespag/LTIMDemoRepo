@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.net.URL;
 import java.net.MalformedURLException;
 import java.util.Properties;
-
+import org.apache.log4j.Logger;
 
 import org.openqa.selenium.io.FileHandler;
 
@@ -27,12 +27,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 
 
 public class TestHybrid {
     public static WebDriver driver;
     public static final Logger logger = Logger.getLogger(TestHybrid.class);
     
+    ExtentReports extent;
+    ExtentSparkReporter spark;
+    ExtentTest test;
 
     public static By uname = By.id("username");
     public static By pwd = By.id("password");
@@ -56,6 +63,9 @@ public class TestHybrid {
         //driver.manage().timeouts().pageLoadTimeOut(Duration.ofSeconds(15));
 
         driver.get(readProp("Url"));
+
+        spark = new ExtentSparkReporter("SparkReport.html");
+        
         logger.info("Info - Hotel App Page Opened");
     }
 
