@@ -31,6 +31,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.seleniumhelper.SeleniumHelper;
+
+import com.UIStore.LocatorUtil;
+import com.Utils.ExcelUtility;
+import com.Utils.PropUtil;
+import com.Util.ScreenshotUtil;
+import com.seleniumhelper.SeleniumHelper;
 
 
 
@@ -41,10 +48,6 @@ public class TestHybrid {
     ExtentReports extent;
     ExtentSparkReporter spark;
     ExtentTest test;
-
-    
-
-    
 
     @BeforeMethod
     public void setup() throws MalformedURLException, IOException
@@ -82,14 +85,14 @@ public class TestHybrid {
 
         test = extent.createTest("Hotel Login");
 
-        TestHybrid th = new TestHybrid();
+        SeleniumHelper sh = new SeleniumHelper();
         logger.info("Info - Test Object created");
         logger.warn("Warning - Can Possibly throw Exception");
-        th.typeIntoField(uname,user);
-        th.typeIntoField(pwd,pass);
-        th.clickElem(loginBtn);
+        sh.typeIntoField(uname,user);
+        sh.typeIntoField(pwd,pass);
+        sh.clickElem(loginBtn);
         Thread.sleep(5000);
-        captureScreenshot();
+        ScreenshotUtil.captureScreenshot();
         logger.debug("Debug - Look to add to report");
 
         test.pass("Successfully Logged into the HotelApp");
@@ -105,19 +108,5 @@ public class TestHybrid {
     public void flushRep()
     {
         extent.flush();
-    }
-
-    
-
-    
-
-    
-
-    public static void captureScreenshot() throws IOException
-    {
-        
-        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "screenshots/hotel.png";
-        FileHandler.copy(screenshot, new File(screenshotPath));
     }
 }
