@@ -19,6 +19,8 @@ public class TestRWD {
     @BeforeTest
     public void setup() throws MalformedURLException
     {
+        
+        
         driver = new RemoteWebDriver(new URL("http://localhost:4444/"), new ChromeOptions());
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.adactinhotelapp.com");
