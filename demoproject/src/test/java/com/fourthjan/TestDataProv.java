@@ -54,12 +54,13 @@ public class TestDataProv {
     @Test (dataProvider = "readSearchTerm")
     public void testAmazon(String searchWord) throws InterruptedException
     {
-        SeleniumHelper helper = new SeleniumHelper(driver);
+        //SeleniumHelper helper = new SeleniumHelper(driver);
         //LocatorUtils loc = new LocatorUtils();
-        helper.typeInto(LocatorUtils.searchBar, searchWord);
+        //helper.typeInto(LocatorUtils.searchBar, searchWord);
         Thread.sleep(5000);
-        ScreenshotUtil.captureScreenshot(driver,"Test1");
+        //ScreenshotUtil.captureScreenshot(driver,"Test1");
         //helper.performClick(loc.testLink);
+        System.out.println("One More Print Statement");
         
     }
 
