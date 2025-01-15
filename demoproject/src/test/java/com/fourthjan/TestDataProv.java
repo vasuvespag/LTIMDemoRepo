@@ -59,6 +59,9 @@ public class TestDataProv {
         //helper.typeInto(LocatorUtils.searchBar, searchWord);
         Thread.sleep(5000);
         //ScreenshotUtil.captureScreenshot(driver,"Test1");
+
+        System.out.println("Adding this to trigger Jenkins build automatically");
+
         //helper.performClick(loc.testLink);
         System.out.println("One More Print Statement");
         
