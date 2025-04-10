@@ -30,7 +30,7 @@ public class TestDataProv {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"),new ChromeOptions());
         logger.info("Driver Object created");
         PropUtils prop = new PropUtils();
-        
+        System.out.println("For Jenkins");
         String link = prop.readProp();
         logger.info("Read from property file");
         System.out.println(link);
